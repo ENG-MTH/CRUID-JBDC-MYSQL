@@ -1,6 +1,8 @@
 package org.dutam.training.service;
 
+import org.dutam.training.entity.Product;
 import org.dutam.training.entity.UserEntity;
+import org.dutam.training.repository.ProductRe;
 import org.dutam.training.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,3 +36,9 @@ public class UserService {
         return userRepository.findById(id).orElse(new UserEntity());
     }
 }
+
+
+
+
+
+

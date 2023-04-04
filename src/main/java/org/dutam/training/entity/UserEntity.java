@@ -3,6 +3,8 @@ package org.dutam.training.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "training_user_table")
 @Getter
