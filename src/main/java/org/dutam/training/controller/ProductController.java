@@ -1,9 +1,7 @@
 package org.dutam.training.controller;
 
 import org.dutam.training.entity.Product;
-import org.dutam.training.entity.UserEntity;
 import org.dutam.training.service.Pservice;
-import org.dutam.training.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,10 +19,13 @@ public class ProductController {
     @GetMapping
     public List<Product> getP(){return pService.findAllP();}
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public void deleteP(@PathVariable Integer id) {pService.deleteP(id);}
 
     @PutMapping
     public Product productEdit(@RequestBody Product id) {return pService.updateP(id);}
+
+    @GetMapping("/{id}")
+    public Product ProductByID(@PathVariable Integer id) {return pService.findPById(id);}
 
 }
